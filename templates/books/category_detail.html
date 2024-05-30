@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CategoryDetailPage</title>
+</head>
+<body>
+    <h1> CategoryDetail Page </h1>
+
+    {% for type in types %}
+        <img src="{{ type.image.url }}" height="200px"><br><br>
+        Title: {{ type.title }}<br>
+        Price: {{ type.price }} so'm
+    {% endfor %}
+</body>
+</html>
