@@ -5,12 +5,13 @@
     <title>CategoryDetailPage</title>
 </head>
 <body>
-    <h1> CategoryDetail Page </h1>
+    <h1> {{ category.name }} </h1>
 
     {% for type in types %}
         <img src="{{ type.image.url }}" height="200px"><br><br>
         Title: {{ type.title }}<br>
-        Price: {{ type.price }} so'm
+        Price: {{ type.price }} so'm <br>
+        <a href="{% url 'book-detail' type.pk %}"> for more... </a><hr>
     {% endfor %}
 </body>
 </html>

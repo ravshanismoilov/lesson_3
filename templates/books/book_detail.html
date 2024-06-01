@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {{ book.title }} </title>
+</head>
+<body>
+    <img src="{{ book.image.url }}" alt="image" height="300px"><br><br>
+    Title: {{ book.title }}<br>
+    Description: {{ book.description }}<br>
+    Page: {{ book.page }}<br>
+    Year: {{ book.year }}<br>
+    Price: {{ book.price }} so'm <br>
+    Author: {{ book.author }}<br>
+    Language: {{ book.language }}<br><br>
+
+    <button><a href="{% url 'book-delete' book.pk %}"> Delete </a> </button>
+    <button><a href="{% url 'book-update' book.pk %}"> Update </a> </button>
+    <button><a href="{% url 'homepage' %}"> Home </a> </button><hr>
+
+</body>
+</html>
